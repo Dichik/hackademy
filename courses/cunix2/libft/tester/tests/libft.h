@@ -18,3 +18,12 @@ char * ft_strrchr(char * str, char ch);
 
 //Day 2
 int ft_abs(int x);
+div_t ft_div(int n, int d);
+char* ft_strstr(char *str1, char *str2);
+char* ft_strnstr(char * str1, char * str2);
+void *ft_memset(char *, int z, int);
+void *ft_memcpy(void *dest, void *src, int n);
+void *ft_memccpy(void *dest, void *src, int ch, int n);
+void *ft_memmove(void *dest, void *src, int n);
+void *ft_memchr(char *str1, char *str2, int n);
+int ft_memcmp(char *str1, char *str2, int n);
