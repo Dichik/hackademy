@@ -27,3 +27,11 @@ void *ft_memccpy(void *dest, void *src, int ch, int n);
 void *ft_memmove(void *dest, void *src, int n);
 void *ft_memchr(char *str1, char *str2, int n);
 int ft_memcmp(char *str1, char *str2, int n);
+
+//Day 3
+void ft_striter(char *s, void (*f)(char));
+char * ft_strmap(char const *s, char (*f)(char));
+char * ft_strsub(char const *s, unsigned int start, int len);
+char * ft_strjoin(char const *s1, char const *s2);
+char * ft_strtrim(char const *s);
+char ** ft_strsplit(char const *s, char c);
