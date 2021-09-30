@@ -12,8 +12,8 @@ import (
 )
 
 type Response struct {
-	Number *big.Int
 	Time   time.Duration
+	Number *big.Int
 }
 
 func main() {
@@ -28,15 +28,15 @@ func main() {
 		handleError(err)
 
 		encoder := json.NewEncoder(connection)
-		encod := encoder.Encode(input)
-		handleError(encod)
+		encodedData := encoder.Encode(input)
+		handleError(encodedData)
 
-		var message Response
+		var response Response
 		decoder := json.NewDecoder(connection)
-		decod := decoder.Decode(&message)
-		handleError(decod)
+		decodedData := decoder.Decode(&response)
+		handleError(decodedData)
 
-		fmt.Println(&message.Time, message.Number)
+		fmt.Println(response.Time, response.Number)
 	}
 }
 
@@ -44,5 +44,5 @@ func handleError(err error) {
 	if err == nil {
 		return
 	}
-	fmt.Println("Error ", err.Error())
+	fmt.Println("Error ", err)
 }
